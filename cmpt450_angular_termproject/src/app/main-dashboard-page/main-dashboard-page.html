@@ -1,4 +1,108 @@
-<div>
-    <p>main-dashboard-page works!</p>
-    <h1>OH HEY</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Play - Game Data Dashboard</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <a routerLink="/home">| Home |</a>
+        <a routerLink="/detail"> Game Details |</a>
+    </div>
+
+    <main class="dashboard">
+        
+        <!-- Top Row of Charts -->
+        <section class="top-charts">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Active Players Over Time</h2>
+                    <p class="card-subtitle">(line chart)</p>
+                </div>
+                <div class="placeholder-content">Line Chart Placeholder</div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Active Players Per Genre</h2>
+                    <p class="card-subtitle">(bar chart)</p>
+                </div>
+                <div class="placeholder-content">Bar Chart Placeholder</div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Genre Explore</h2>
+                    <p class="card-subtitle">(bubble chart)</p>
+                </div>
+                <div class="placeholder-content">Bubble Chart Placeholder</div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Top Performing Tags</h2>
+                    <p class="card-subtitle">(word cloud)</p>
+                </div>
+                <div class="placeholder-content">Word Cloud Placeholder</div>
+            </div>
+        </section>
+
+        <!-- Bottom Section with Filters and Main Chart -->
+        <section class="bottom-content">
+            
+            <!-- Filters Panel -->
+            <aside class="filters-panel">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <label for="genre-select">Genres</label>
+                    <div class="custom-select-wrapper">
+                        <select id="genre-select">
+                            <option>All Genres</option>
+                            <option>Action</option>
+                            <option>Adventure</option>
+                            <option>RPG</option>
+                            <option>Strategy</option>
+                            <option>Simulation</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Price Range</label>
+                    <div class="range-slider-wrapper">
+                      <input type="range" id="price-range" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label for="release-date">Release Date</label>
+                    <div class="range-slider-wrapper">
+                      <input type="range" id="release-date" min="2000" max="2024" value="2018">
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Chart Area -->
+            <div class="card main-chart">
+                <div class="placeholder-content">
+                    Main Scatter Plot Placeholder
+                    <div class="faux-tooltip">
+                        <div class="name">Game Name</div>
+                        <div class="price">Price</div>
+                        <div class="arrow">&rarr;</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        // JavaScript can be added here for interactivity later.
+        console.log("Dashboard loaded!");
+    </script>
+
+</body>
+</html>
